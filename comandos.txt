@@ -1,0 +1,37 @@
+------------Migrar una sola tabla--------------
+
+
+php artisan migrate --path=database/migrations/2023_12_02_145659_create_pacientes_table.php
+
+
+
+--------------Crear seeder-----------------------
+
+php artisan make:seeder PacienteSeeder
+
+
+
+--------------Migrar Seeders----------------------
+
+php artisan db:seed
+
+
+
+
+---------------revertir migraciones---------------
+php artisan migrate:refresh --path=
+
+
+
+
+-----Crear request personalidados para manejo de errores personalizados--------
+
+php artisan make:request ActualizarPacienteRequest
+
+
+
+
+
+--crear un resource para manejar como queremos mostrar la respuestade JSON en pocas palabras una capa de transformacion entre el modelo y la respuesta json---
+
+php artisan make:resource PacienteResource
